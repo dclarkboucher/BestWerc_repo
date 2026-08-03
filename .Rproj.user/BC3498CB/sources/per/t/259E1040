@@ -1,0 +1,27 @@
+{
+    "id": "259E1040",
+    "path": "~/Project 1 - Historical controls/BestWerc_repo/scripts/sims_normal_ess.R",
+    "project_path": "scripts/sims_normal_ess.R",
+    "type": "r_source",
+    "hash": "3404747867",
+    "contents": "",
+    "dirty": false,
+    "created": 1783632393300.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "393,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1783634177,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1783634177073,
+    "read_only": false,
+    "read_only_alternatives": []
+}

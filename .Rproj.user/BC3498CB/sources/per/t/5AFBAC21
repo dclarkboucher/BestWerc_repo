@@ -1,0 +1,26 @@
+{
+    "id": "5AFBAC21",
+    "path": "~/Project 1 - Historical controls/BestWerc_repo/scripts/sims_normal_recalibrated.R",
+    "project_path": "scripts/sims_normal_recalibrated.R",
+    "type": "r_source",
+    "hash": "182310341",
+    "contents": "",
+    "dirty": false,
+    "created": 1783634040482.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "65,2",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1782404561,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1782404561,
+    "read_only": false,
+    "read_only_alternatives": []
+}
