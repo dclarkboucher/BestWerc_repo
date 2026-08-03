@@ -56,59 +56,6 @@ colors2 <- c("#fdae61","gray60","#abd9e9")
 smallfont <- 9
 largefont <- 10
 
-# results %>% 
-#   pivot_longer(
-#     cols = c(power, type_1_error),
-#     names_to = "scenario",
-#     values_to = "performance"
-#   ) %>% 
-#   mutate(
-#     scenario = ifelse(scenario == "power", "H1", "H0"),
-#     rf = factor(r),
-#     metric1 = fct_rev(ifelse(scenario == "H1", "Power", "T1E Rate")),
-#     R_0_label = paste0("pi[0] == ",R_0)
-#   ) %>% 
-#   ggplot(aes(x = a_0, y = performance, color = rf, linetype = metric1
-#   ))  + 
-#   geom_hline(aes(yintercept = 0.05), color = "gray30",
-#              linewidth = 0.65) +
-#   geom_hline(aes(yintercept = 0.65), color = "gray30",
-#              linewidth = 0.65) +
-#   facet_wrap(~R_0_label, labeller = "label_parsed") + 
-#   geom_line(linewidth = 0.8) +
-#   # geom_point(size = 2) + 
-#   scale_x_continuous(breaks = round(seq(0, 1, 0.2),2), limits = c(0,1)) + 
-#   scale_y_continuous(breaks = round(seq(0, 1, 0.2),2), limits = c(0,1)) + 
-#   scale_color_manual(values = rev(colors1))+
-#   scale_linetype_manual(values = c(5,4)) +
-#   labs(linetype = "Metric",color = "r",
-#        
-#        y = "Rejection Probability",
-#        x = expression(a[0])) + 
-#   theme_minimal() + 
-#   theme(
-#     plot.background = element_rect(color = NA, fill = "white"),
-#     panel.grid = element_line(color = NA),
-#     panel.border = element_rect(color = "black", linewidth = 0.5,
-#                                 fill = NA),
-#     legend.position = "right",
-#     legend.box = "vertical",
-#     legend.margin = margin(),
-#     strip.text = element_text(size = smallfont),
-#     # strip.background = element_rect(fill = "gray90", color = "gray90"),
-#     plot.title = element_blank(),
-#     axis.text = element_text(size = smallfont),
-#     axis.title = element_text(size = smallfont),
-#     axis.title.y = element_blank(),
-#     axis.ticks = element_line(color = "black", linewidth = 0.5),
-#     legend.title = element_text(size = smallfont),
-#     legend.text = element_text(size = smallfont)
-#   )
-# ggsave("figures/error_rates_binary.tiff",
-#        width = 6.5, height = 3.5, units = "in", dpi = 800
-# )
-
-
 results %>% 
   pivot_longer(
     cols = c(power, type_1_error),

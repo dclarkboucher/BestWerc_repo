@@ -50,8 +50,6 @@ system.time({
     )
 })
 results <- cbind(settings, as.data.frame(out))
-# this takes 1040 seconds or 17 minutes.
-# the numerical approach would take 17 * 70 * 5 minutes which is 71 hours. 
 
 colors1 <- c("#d7191c","#fdae61","gray60","#abd9e9","#2c7bb6")
 smallfont <- 9

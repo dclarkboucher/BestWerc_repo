@@ -225,7 +225,7 @@ b_ep <- hparams$b
 
 # Simulations -------------------------------------------------------------
 nreps <- 5000
-methods <- c("MAP","SAM") # Edited to use SAM
+methods <- c("MAP","SAM") 
 rs <- c(-0.5,-0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5)
 
 sam_csd <- 0.05 

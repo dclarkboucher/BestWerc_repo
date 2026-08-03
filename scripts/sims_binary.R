@@ -116,7 +116,6 @@ analyze <- function(n_0, n_1, x_0, x_1, prior0, prior1, ep_prior, method = c("EP
     post_y0[1,] <- (post_y0[1,] + 1e-4) / sum(post_y0[1,]+ 1e-4)
   }
   
-  # ess <- ess(post_y0, sigma = sigma)
   ess <- try(ess(post_y0), silent = T)
   if (inherits(ess,"try-error")) ess <- sum(post_y0[c("a","b"),])
   # ess <- 1
@@ -224,12 +223,11 @@ b_ep <- hparams$b
 
 
 # Simulations -------------------------------------------------------------
-nreps <- 5000 # try making the weakly informative prior even weaker - that could help. 
-methods <- c("MAP","SAM", "EP") # Edited to use SAM
+nreps <- 5000
+methods <- c("MAP","SAM", "EP") 
 rs <- c(-0.5,-0.4, -0.3, -0.2, -0.1, 0, 0.1, 0.2, 0.3, 0.4, 0.5)
-# rs <- c(-0.5, 0, 0.5)
 sam_csd <- abs(delta)
-map_wt <- 0.20 # This weight is the best.
+map_wt <- 0.20 
 thresholds <- c(0.976, 0.976, 0.95)
 names(thresholds) <- methods
 

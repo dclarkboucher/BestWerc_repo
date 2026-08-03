@@ -78,10 +78,6 @@ results <-
       type == "fixed" ~ "plain(Fixed~variance)",
       T ~ paste0("{alpha == beta} == ",alpha)) %>%
         fct_inorder(ordered = TRUE),
-    # type_label = case_when(
-    #   type == "fixed" ~ "plain(Fixed~variance)",
-    #   T ~ paste0("alpha==beta == ",alpha)) %>% 
-    #   fct_inorder(ordered = TRUE),
     bias = a_0 * r * delta,
     mse = bias^2 + (1 - a_0)^2 * (sigma^2) * k / n_1
     
@@ -103,88 +99,6 @@ colors1 <- c("#d7191c","#fdae61","gray60","#abd9e9","#2c7bb6")
 colors2 <- c("gold1","dodgerblue1","firebrick1")
 smallfont <- 9
 largefont <- 10
-
-# Main plot
-# 
-# results %>%
-#   filter(metric %in% c("power", "type_1_error")
-#          ) %>% 
-#   ggplot() +
-#   geom_hline(aes(yintercept = 0.05), color = "gray30",
-#              linewidth = 0.65) +
-#   geom_hline(aes(yintercept = 0.65), color = "gray30",
-#              linewidth = 0.65) +
-#   scale_y_continuous(limits = c(0,1),
-#                      expand = c(0.02,0.02),
-#                      breaks = seq(0, 1, by = 0.2)
-#   ) +
-#   scale_x_continuous(limits =c(0,1),
-#                      expand = c(0.02,0.02),
-#                      breaks = seq(0, 1, by = 0.2)
-#                      
-#   ) +
-#   geom_line(
-#     aes(x = a_0,
-#         y = performance,
-#         linetype = metric1,
-#         color = rf
-#         
-#     ),
-#     linewidth = 0.8
-#   ) +
-#   theme_minimal() +
-#   scale_linetype_manual(
-#     values = c(4,5)
-#   ) +
-#   scale_color_manual(values = rev(colors1)) +
-#   facet_wrap(~type_label, dir = "v", labeller = "label_parsed", 
-#              ncol = 2) +
-#   theme(
-#     panel.grid = element_line(color = NA),
-#     panel.border = element_rect(color = "black", linewidth = 0.5,
-#                                 fill = NA),
-#     plot.background = element_rect(color = NA, fill = "white"),
-#     legend.position = "right",
-#     legend.box = "vertical",
-#     legend.margin = margin(),
-#     strip.text = element_text(size = smallfont),
-#     plot.title = element_blank(),
-#     axis.text = element_text(size = smallfont),
-#     axis.title = element_text(size = smallfont),
-#     axis.title.y = element_blank(),
-#     axis.ticks = element_line(color = "black", linewidth = 0.5),
-#     legend.title = element_text(size = smallfont),
-#     legend.text = element_text(size = smallfont)
-#   ) +
-#   annotate(
-#     geom = "text",
-#     x = 0.95,
-#     y = 0.075,
-#     label = "0.05",
-#     size = 3
-#   ) +
-#   annotate(
-#     geom = "text",
-#     x = 0.95,
-#     y = 0.675,
-#     label = "0.65",
-#     size = 3
-#   ) +
-#   labs(
-#     x = expression(a[0]),
-#     y = "Rejection Probability",
-#     color = "r",
-#     linetype = "Metric"
-#     
-#   )
-# ggsave(
-#   file = "figures/error_rates_normal.tiff",
-#   units = "in",
-#   height = 6,
-#   width = 6.5,
-#   dpi = 800
-# )
-# 
 
 # Main plot
 results %>%

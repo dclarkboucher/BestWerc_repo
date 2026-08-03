@@ -103,17 +103,14 @@ analyze <- function(y0_dat, y1_dat,
     sam_weight <-
       suppressMessages(SAM_weight(
         if.prior = prior0,
-        # method.w = "PPR",
-        # prior.odds = h0_prob / (1-h0_prob),
-        delta = csd, # as long as drift is in expected range, ok
+        delta = csd, 
         data = y0_dat
       ))
-    # sam_weight <- max(min(sam_weight, 0.99),0.01)
     
     prior0 <-
       SAM_prior(
         if.prior = prior0,
-        nf.prior = prior1, # weakly informative can go here too, that's fine
+        nf.prior = prior1, 
         weight = sam_weight,
         sigma = sigma
       )
