@@ -7,5 +7,5 @@ Then use the script "master.R" to run the analysis components sequentially. The
 output will be stored in the results, figures, and tables folders. 
 
 Some of the simulation studies may take several hours to finish. To run 
-smaller and faster versions of the simulations, open the corresponding R script 
+reduced versions of the simulations for illustration purposes, open the corresponding R script 
 and reduce the "nreps" parameter. 
