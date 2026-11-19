@@ -41,5 +41,8 @@ source("scripts/sims_normal_recalibrated.R")
 # Simulation comparison for binary data (< 3 hours)
 source("scripts/sims_binary_recalibrated.R")
 
-# Power and error rate for survival data (< 45 minutes)
+# Power and error rate for Weibull survival data with p_0 calibrated to the known shape (< 45 minutes)
 source("scripts/error_rates_survival_weibull.R")
+
+# Power and error rate for Weibull survival data without calibrating p_0 (< 45 minutes)
+source("scripts/error_rates_survival_weibull_misspecified.R")
